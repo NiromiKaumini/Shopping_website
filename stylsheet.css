@@ -1,0 +1,31 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: linear;
+
+}
+header{
+    position: fixed;
+    top: 0; left: 0; right: 0 ;
+    display: flex;
+    z-index: 1000;
+}
+header a{
+    position: relative;
+    top: -80px; left: 190px; right: 100px; 
+}
+html{
+    font-size: 16px;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+}
+::selection{
+    background-color: #fff;
+    color: black;
+}
