@@ -1,4 +1,4 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -6,26 +6,109 @@
     border: none;
     text-decoration: none;
     text-transform: uppercase;
-    transition: linear;
+    transition: all 0.3s linear;
+}
 
-}
-header{
-    position: fixed;
-    top: 0; left: 0; right: 0 ;
-    display: flex;
-    z-index: 1000;
-}
-header a{
-    position: relative;
-    top: -80px; left: 190px; right: 100px; 
-}
-html{
-    font-size: 16px;
+html {
+    font-size: 65%;
     overflow-x: hidden;
     scroll-behavior: smooth;
     scroll-padding-top: 6rem;
 }
-::selection{
+
+::selection {
     background-color: #fff;
     color: black;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+    padding: 1rem 5%;
+    box-shadow: 0 8px 6px rgba(10, 10, 10, 0.452);
+    z-index: 1000;
+}
+
+header a {
+    font-size: 20px;
+    margin-left: 6rem;
+    padding-bottom: 0;
+    color: black; 
+    
+}
+
+nav .navbar{
+    display: flex;
+    align-items: center;
+}
+.logo {
+    font-size: 2rem;
+    align-items:flex-start;
+    text-align: center; 
+    width: 100%;
+    max-width: 1200px;
+}
+.navbar a:hover{
+    color: rgb(235, 7, 38);
+}
+
+#menu{
+    font-size: 3rem;
+    color: black;
+    cursor: pointer;
+    border-radius: 5rem;
+    border: 1rem;
+    padding: 3rem;
+    display: none;
+}
+
+
+
+
+
+@media(max-width:909px){
+    html{
+        font-size: 40%;
+    }
+    header{
+        padding: 2rem;
+    }
+}
+@media(max-width:685px){
+    html{
+        font-size: 10%;
+    }
+}
+@media(max-width:557px){
+    html{
+        font-size: 2px;
+    }
+    #menu{
+        display: initial;
+        font-size: 40px;
+       
+    }
+    header .navbar{
+        position: absolute;
+        top: 100%;left: 0;right: 0;
+        background-color: #fff;
+        border-top-color: 1rem solid red;
+        clip-path:polygon(0 0,100% 0,100% 0, 0 0);
+    }
+    header .navbar a{
+        margin: 1.5rem;
+        padding: 1.5rem;
+        display: block;
+        border: 1rem solid rgba(0, 0, 0, 0.562);
+        border-radius: 10%;
+        border-left: 3rem solid red;
+
+    }
+   
 }
