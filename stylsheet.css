@@ -5,8 +5,9 @@
     outline: none;
     border: none;
     text-decoration: none;
-    text-transform: uppercase;
     transition: all 0.3s linear;
+    color: inherit;
+  
 }
 
 html {
@@ -41,6 +42,7 @@ header a {
     padding-bottom: 0;
     color: black; 
     position: relative;  
+    text-transform: uppercase;
 }
 
 nav .navbar{
@@ -66,47 +68,197 @@ nav .navbar{
     border: 1rem;
     padding: 3rem;
     display: none;
+   
 }
 section .contener {
-    width: 60rem;
+    width: 400%;
     height: auto;
     position: relative;
     margin-top: 4.2cm;
+    overflow: hidden;
 }
 
 .contener {
     display: flex;
-    width: 900%;
-    height: auto;
-    animation: slide 10s infinite;
-    
+    animation: slide 20s infinite; 
+    overflow: hidden;
 }
 
 .contener img {
-    width: 90%; /* Each image takes up one third of the container */
-    height: auto;
+    width: 25%;
     object-fit:cover;
 
 }
+header .navba {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+header .navbar.active {
+    display: flex;
+}
+
+.home h1{
+    font-size: 30px;
+    text-align: center;
+    padding: 7rem;
+    
+}
+
+.box{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.imgcon{
+    position: relative;
+    overflow: hidden;
+    border: 0.5rem solid rgba(245, 239, 239, 0.295);
+    cursor: pointer;
+}
+.imgcon h2,h3{
+    padding: 1rem;
+    font-size: 15px;
+}
+.imgcon i{
+    font-size: 25px;
+}
+
+.specollection h1{
+    text-align: center;
+    font-size: 3.3rem;
+    padding: 4rem;
+}
+.specollection .boxcollecton{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+.boxcollecton .boxc{
+    flex: 1 1;
+    padding: rem;
+    position: relative;
+    overflow: hidden;
+    border: 2px solid rgba(0, 0, 0, 0.295);
+    border-radius: 10%;
+}
+.boxcollecton .boxc img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    object-fit: cover;
+    top: -100%; left: 0;
+}
+.boxcollecton .boxc h2,p{
+    text-align: center;
+    background-color: #fffcfc;
+    padding: 2rem;
+    font-size: 2rem;
+}
+.boxcollecton .boxc h2{
+    padding-top: 10rem;
+}
+.boxcollecton .boxc p{
+    padding-bottom: 10rem;
+    color: rgba(19, 18, 18, 0.623);
+    font-family: cursive;
+    
+}
+.boxcollecton .boxc:hover img{
+    top: 0;
+}
+
+.customer h1{
+    text-align: center;
+    font-size: 30px;
+    padding: 5rem;
+}
+.customer .box1 i{
+    font-size: 20px;
+    color: rgb(30, 26, 236);
+}
+.customer .box1 p{
+    font-size: 18px;
+    margin-top: 0;
+}
+.customer .box1{
+    box-sizing: border-box;
+    width: 100%;
+    height: 30rem;
+    border: 2rem;
+    text-align: center;
+    border: solid#0e0d0d21;
+    margin: 2rem;
+    padding: 1rem;
+    position: relative;
+    flex: 1 1;
+    overflow: hidden;
+    padding-top: 4rem;
+    box-shadow: 0 8px 6px rgba(10, 10, 10, 0.452);
+}
+.customer .full{
+    display: flex;
+    overflow: hidden;
+    gap: 1.5rem;
+}
+
+.footer{
+    display: flex;
+    position: relative;
+}
+.footer .main img{
+    width: 20rem;
+    height: 20rem;
+    border: #050505;
+    padding: 2rem;
+}
+.footer .main p{
+    font-size: 15px;
+    font-family: cursive;
+    text-align: center;
+    margin-top: -4rem;
+    box-sizing: border-box;
+    width: 20rem;
+    height: 10rem;
+}
+.footer .info{
+    font-size: 15px;
+    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr; /* Single column layout */
+    gap: 10px;
+    margin-top: 8rem;
+    margin-left: 6rem;
+    margin-right: 6rem;
+    padding: 20px
+}
+.info a{
+   text-decoration: none;
+   padding: 10px;
+   border-radius: 4px;
+}
+
+
+
+
 
 @keyframes slide {
     0% {
         transform: translateX(0);
     }
+    25% {
+        transform: translateX(-25%);
+    }
     50% {
         transform: translateX(-50%);
     }
-    100% {
-        transform: translateX(-100%);
+    75% {
+        transform: translateX(-75%);
     }
     100% {
         transform: translateX(0);
     }
 }
-
-
-
-
 
 @media(max-width:909px){
     html{
@@ -145,18 +297,7 @@ section .contener {
         border-radius: 10%;
         border-left: 3rem solid red;
 
-    }
+    } 
     
-   
-}
-header .navba {
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
 }
 
-/*header .navbar .active {
-    clip-path: polygon(0 0,100% 0,100% 100%, 0 100%);
-}*/
-
-header .navbar.active {
-    display: flex;
-}
