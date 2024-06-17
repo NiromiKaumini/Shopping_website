@@ -43,6 +43,7 @@ header a {
     color: black; 
     position: relative;  
     text-transform: uppercase;
+    padding: 1rem;
 }
 
 nav .navbar{
@@ -55,10 +56,27 @@ nav .navbar{
     text-align: center; 
     width: 100%;
     max-width: 1200px;
+    margin-top: -1rem;
+
 }
 .navbar a:hover{
     color: rgb(235, 7, 38);
 }
+
+header .navbar .icon{
+    font-size: 30px;
+    position:absolute;
+    margin-top: -9rem;
+    margin-left: 100rem;
+}
+header .navbar .icon i{
+    padding: 1rem;
+    cursor: pointer;
+}
+header .navbar .icon i:hover{
+    color: #007bff;
+}
+
 
 #menu{
     font-size: 3rem;
@@ -202,17 +220,25 @@ header .navbar.active {
     gap: 1.5rem;
 }
 
-.footer{
+/* General Footer Styling */
+.footer {
     display: flex;
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+    justify-content: space-between;
+    background-color: #fff; /* Light background color */
+    padding: 2rem 6rem;
     position: relative;
+    box-shadow: 2rem#333333;
 }
-.footer .main img{
+
+.footer .main img {
     width: 20rem;
     height: 20rem;
-    border: #050505;
     padding: 2rem;
+    object-fit: cover; /* Ensures the image covers the whole area */
 }
-.footer .main p{
+
+.footer .main p {
     font-size: 15px;
     font-family: cursive;
     text-align: center;
@@ -220,25 +246,83 @@ header .navbar.active {
     box-sizing: border-box;
     width: 20rem;
     height: 10rem;
+    padding: 1rem;
+    background-color: #ffffff; /* White background for contrast */
+    border-radius: 8px; /* Rounded corners */
 }
-.footer .info{
-    font-size: 15px;
+
+.footer .info, .footer .find, .footer .contac {
+    display: flex;
     flex-direction: column;
-    display: grid;
-    grid-template-columns: 1fr; /* Single column layout */
-    gap: 10px;
-    margin-top: 8rem;
-    margin-left: 6rem;
-    margin-right: 6rem;
-    padding: 20px
-}
-.info a{
-   text-decoration: none;
-   padding: 10px;
-   border-radius: 4px;
+    gap: 1rem;
+    font-size: 15px;
+    text-align: center;
+    margin-top: 4rem;
+    padding: 1rem;
 }
 
+.footer .info h2, .footer .find h2, .footer .contac h2 {
+    text-transform: uppercase;
+    font-size: 18px;
+    margin-bottom: 1rem;
+    color: #050505; /* Darker color for headings */
+}
 
+.footer .info a, .footer .find a, .footer .contac a {
+    text-decoration: none;
+    color: #333333;
+    padding: 10px;
+    background-color: #e0e0e0;
+    border-radius: 4px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.footer .info a:hover, .footer .find a:hover, .footer .contac a:hover {
+    background-color: #333333;
+    color: #ffffff;
+}
+
+.footer .icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    padding: 1rem;
+    gap: 1rem;
+}
+
+.footer .icon i {
+    font-size: 40px;
+    color: #333333;
+    transition: color 0.3s;
+}
+
+.footer .icon i:hover {
+    color: #007bff; /* Change color on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer {
+        flex-direction: column;
+        align-items: center;
+        padding: 2rem;
+    }
+
+    .footer .main, .footer .info, .footer .find, .footer .contac, .footer .icon {
+        margin-top: 2rem;
+    }
+
+    .footer .main p {
+        margin-top: 0;
+        height: auto;
+    }
+
+    .footer .info, .footer .find, .footer .contac {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
 
 
 
