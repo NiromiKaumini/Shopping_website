@@ -61,7 +61,121 @@ header{
 .contener label:hover{
     background-color: brown;
 }
-.contener{
-    margin-top: 2rem;
+
+  fieldset {
+    border: 1px solid #ccc;
     padding: 1rem;
-}
+  }
+  
+  fieldset h3 {
+    margin-top: 0;
+  }
+  
+  fieldset ul {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+  }
+  
+  fieldset ul li {
+    margin-bottom: 0.5rem;
+  }
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .top {
+    text-align: center;
+    margin: 2rem 0;
+    padding: 0 1rem;
+  }
+  
+  .top h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .top p {
+    font-size: 1.2rem;
+    color: #555;
+  }
+  
+  .top select {
+    margin-top: 1rem;
+    padding: 0.5rem;
+    font-size: 1rem;
+  }
+  
+  .contener {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 1.5rem;
+    padding: 2rem;
+  }
+  
+  .box {
+    border: 1px solid #ddd;
+    padding: 1rem;
+    text-align: center;
+    transition: transform 0.2s;
+  }
+  
+  .box:hover {
+    transform: scale(1.05);
+  }
+  
+  .image {
+    position: relative;
+  }
+  
+  .image img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .image label {
+    position: absolute;
+    top: 0;
+    left: 20px;
+    background-color: #ff0000;
+    color: #fff;
+    padding: 0.2rem 0.5rem;
+    font-size: 0.8rem;
+    font-weight: bold;
+    border-radius: 0.2rem;
+  }
+  
+  .price h3 {
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
+  }
+  
+  .price h4 {
+    font-size: 1rem;
+    color: #888;
+  }
+  
+  @media (max-width: 600px) {
+    .top h1 {
+      font-size: 2rem;
+    }
+  
+    .top p {
+      font-size: 1rem;
+    }
+  
+    .box {
+      padding: 0.5rem;
+    }
+  
+    .price h3 {
+      font-size: 1rem;
+    }
+  
+    .price h4 {
+      font-size: 0.9rem;
+    }
+  }
+  
