@@ -118,4 +118,21 @@ body {
   .col1 button:hover {
     background-color: #0056b3;
   }
+  fieldset {
+    border: 1px solid #ccc;
+    padding: 1rem;
+  }
   
+  fieldset h3 {
+    margin-top: 0;
+  
+  }
+  
+  fieldset ul {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+  }
+  
+  fieldset ul li {
+    margin-bottom: 0.5rem;
+  }
